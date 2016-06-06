@@ -12,6 +12,13 @@
     </tr>
   </thead>
 
+
+<% if content_for? :header %>
+  <%= yield :header %>
+<% else %>
+  <p>Blog post index </p>
+<% end %>
+
   <tbody>
     <% @blog_posts.each do |blog_post| %>
       <tr>
